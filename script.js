@@ -24,6 +24,7 @@ document.querySelector('.check').addEventListener('click', function () {
     displayMessage('Correct Number!');
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '30rem';
+    displayNumber(correctNumber);
     if (score > highscore) {
       highscore = score;
       document.querySelector('.highscore').textContent = highscore;
@@ -58,7 +59,7 @@ document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('body').style.backgroundColor = '#222';
   document.querySelector('.number').style.width = '15rem';
 
-  displayNumber = correctNumber;
+  displayNumber(correctNumber);
   displayMessage('Start guessing...');
 
   displayScore(score);
